@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Học nhóm 2</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #dfe9f3, #ffffff);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Banner */
+        .banner {
+			width: 100%;
+			height: 330px;
+			background-image: url("thanhvien2.jpg"); /* DÁN LINK ẢNH Ở ĐÂY */
+			background-size: cover;
+			background-position: center;
+			animation: bannerEnter 1.2s ease-out;
+}
+
+        @keyframes bannerEnter {
+            from { transform: scale(1.1); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Tiêu đề */
+        h2 {
+            text-align: center;
+            margin: 40px 0 10px 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+            color: #333;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Danh sách */
+        .members, .lessons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 20px 40px;
+        }
+
+        /* Card */
+        .card {
+            width: 200px;
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: 0.3s ease-in-out;
+            animation: fadeCard 0.8s ease-out;
+        }
+
+        @keyframes fadeCard {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        h3 {
+            margin-top: 12px;
+            font-weight: 600;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Banner -->
+    <div class="banner"></div>
+
+    <!-- Thành viên -->
+    <h2> Giới thiệu thành viên </h2>
+
+    <div class="members">
+        <div class="card" onclick="location.href='mt.html'">
+            <img src="mt.jpg" alt="">
+            <h3>Minh Thi</h3>
+        </div>
+
+        <div class="card" onclick="location.href='tn.html'">
+            <img src="tn.jpg" alt="">
+            <h3>Tuyết Nhi</h3>
+        </div>
+
+        <div class="card" onclick="location.href='kn.html'">
+            <img src="kn.jpg" alt="">
+            <h3>Khoa Nguyên</h3>
+        </div>
+
+        <div class="card" onclick="location.href='pu.html'">
+            <img src="pu.jpg" alt="">
+            <h3>Phương Uyên</h3>
+        </div>
+
+        <div class="card" onclick="location.href='tt.html'">
+            <img src="thuytien.jpg" alt="">
+            <h3>Thủy Tiên</h3>
+        </div>
+    </div>
+
+    <!-- Bài học -->
+    <h2> Danh sách bài học </h2>
+
+    <div class="lessons">
+
+		<a href="https://www.canva.com/design/DAG5A-TDuu8/ZiqcEJ-iTtzGv2YpCW4T_w/edit?utm_content=DAG5A-TDuu8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
+			<h3>Bài học 8</h3>
+		</a>
+
+		<a href="https://www.canva.com/design/DAG5A-TDuu8/ZiqcEJ-iTtzGv2YpCW4T_w/edit?utm_content=DAG5A-TDuu8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
+			<h3>Bài học 9</h3>
+		</a>
+
+		<a href="https://www.canva.com/design/DAG5A-TDuu8/ZiqcEJ-iTtzGv2YpCW4T_w/edit?utm_content=DAG5A-TDuu8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card">
+			<h3>Bài học 10</h3>
+		</a>
+
+		<a href="https://example.com/baihoc4" class="card">
+			<h3>Bài học 11</h3>
+		</a>
+
+		<a href="https://example.com/baihoc5" class="card">
+			<h3>Bài học 12</h3>
+		</a>
+
+	</div>
+<style>
+    .contact-box {
+        max-width: 520px;
+        margin: 40px auto;
+        padding: 35px;
+        background: #ffffffdd;
+        backdrop-filter: blur(8px);
+        border-radius: 18px;
+        box-shadow: 0 10px 35px rgba(0,0,0,0.18);
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .contact-title {
+        text-align: center;
+        font-size: 26px;
+        font-weight: 700;
+        color: #2d3436;
+        margin-bottom: 20px;
+    }
+    .contact-box label {
+        font-weight: 600;
+        color: #2d3436;
+    }
+    .contact-box input,
+    .contact-box select,
+    .contact-box textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-top: 6px;
+        margin-bottom: 18px;
+        font-size: 15px;
+        transition: 0.25s;
+    }
+    .contact-box input:focus,
+    .contact-box textarea:focus,
+    .contact-box select:focus {
+        border-color: #6c5ce7;
+        box-shadow: 0 0 8px rgba(108,92,231,.3);
+    }
+    .birth-row {
+        display: flex;
+        gap: 10px;
+    }
+    .send-btn {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, #6c5ce7, #a55eea);
+        color: white;
+        font-size: 17px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .25s;
+    }
+    .send-btn:hover {
+        background: linear-gradient(135deg, #4b2dd3, #8250d6);
+        transform: translateY(-2px);
+    }
+
+    /* Thông báo cảm ơn */
+    .thankyou-box {
+        margin-top: 20px;
+        padding: 15px;
+        background: #dfe6ff;
+        border-left: 5px solid #6c5ce7;
+        border-radius: 10px;
+        font-weight: 600;
+        color: #2d3436;
+        display: none;
+        animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<div class="contact-box">
+    <div class="contact-title">Điền Thông Tin</div>
+
+    <form id="contactForm">
+        <label>Email của bạn (người gửi)</label>
+        <input type="email" name="sender_email" placeholder="Nhập email của bạn" required>
+
+        <label>Họ và Tên</label>
+        <input type="text" name="name" placeholder="Nhập họ và tên" required>
+
+        <label>Ngày Sinh</label>
+        <div class="birth-row">
+            <select name="day" required>
+                <option value="">Ngày</option>
+                <script>
+                    for (let i=1;i<=31;i++) document.write(`<option>${i}</option>`);
+                </script>
+            </select>
+
+            <select name="month" required>
+                <option value="">Tháng</option>
+                <script>
+                    for (let i=1;i<=12;i++) document.write(`<option>${i}</option>`);
+                </script>
+            </select>
+
+            <select name="year" required>
+                <option value="">Năm</option>
+                <script>
+                    for (let i=2025;i>=1950;i--) document.write(`<option>${i}</option>`);
+                </script>
+            </select>
+        </div>
+
+        <label>Nội dung</label>
+        <textarea name="content" placeholder="Nhập nội dung..." required></textarea>
+
+        <input type="hidden" name="_subject" value="Có người gửi form cho bạn!">
+
+        <button class="send-btn" type="submit">Gửi Thông Tin</button>
+    </form>
+
+    <div id="thankyou" class="thankyou-box">
+        ✔ Cảm ơn ý kiến của bạn! Chúng tôi đã nhận được thông tin.
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById("contactForm");
+    const thankyou = document.getElementById("thankyou");
+
+    form.addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        // Gửi tới Formspree
+        await fetch("https://formspree.io/f/mwkgnjrn", {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        });
+
+        form.reset();
+        thankyou.style.display = "block";
+    });
+</script>
+</div>
+</body>
+</html>
+
